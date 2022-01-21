@@ -1,6 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include<string.h>
+#include<stdlib.h>
+#include<time.h>
+
+
 // int main()
 // {   
 //     int input = 0;
@@ -192,16 +196,333 @@
 //     return 0;
 // }
 
-int main ()
+// int main ()
+// {
+//     int a = 0;
+//     while (a<=10)
+//     {
+//         a++;
+//         if(a==5)
+//         continue;
+//         printf("%d",a);
+//     }
+
+//     return 0;
+// }
+
+// int main()
+// {
+//     char password[20]={0};
+//     printf("请输入密码:>");
+//     scanf("%s", password);
+//     printf("请确认密码(Y/N):>");
+//     int tmp = 0;
+//     while ((tmp = getchar())!='\n')
+//     {
+//         ;   
+//     }
+//     int ch = getchar();
+//     if (ch == 'Y')
+//     {
+//         printf("确认成功\n");
+
+//     }
+
+
+//     return 0;
+// }
+
+// int main()
+// {
+//     int a = 1;
+//     do 
+//        { printf("%d\n",a);
+//         a++;
+//        }
+//     while(a < 11);
+//     return 0;
+// }
+
+// int main()
+// {
+//     int sum = 1;
+//     int a = 1;
+//     int n = 1;
+//     int fsum = 0;
+//     for(n=1;n<=10;n++,a=1,sum=1)
+//     {
+//     do 
+//     {sum = sum * a;
+//     a++;}
+//     while (a<=n);
+//     fsum +=sum;
+//     }
+//     printf("%d\n",fsum);
+//     return 0;
+// }
+
+// int main()
+// {
+//     int i = 1;
+//     int n = 0;
+//     int ret = 1;
+//     int sum = 0;
+    
+//     for(n=1;n<=10;n++){
+//         ret*=n;
+//         sum+=ret;
+//     }
+
+//     printf("%d\n",sum);
+//     return 0;
+// }
+
+// int main()
+// {
+//     int arr[]={1,2,3,4,5,6,7,8,9,10};
+//     int k = 7;
+//     int left = 0;
+//     int sz = sizeof(arr)/sizeof(arr[0]);
+//     int right = sz-1;
+    
+//     while(left<=right){
+        
+//     int mid = (left+right)/2;
+//     if (arr[mid]<k)
+// {
+//     left = mid +1;
+// }
+//     else if(arr[mid]>k) 
+//     {
+//         right = mid-1;
+//     }
+//     else if(arr[mid]==k)
+//     {
+//         printf("找到了，是%d\n",mid);
+//         break;
+//     }
+//     }
+//     if (left > right)
+//     {
+//         printf("找不到了");
+//     }
+//     return 0;
+// }
+
+// int main()
+// {
+//     char arr1[]="welcome to bit!!!!!";
+//     char arr2[]="xxxxxxxxxxxxxxxxxxx";
+//     int left = 0;
+//     int right = strlen(arr1)-1;
+
+//     while (left <= right)
+//     {
+//         arr2[left]=arr1[left];
+//         arr2[right]=arr1[right];
+//         sleep(1000);
+//         system("cls");
+//         left++;
+//         right--;
+//         printf("%s\n",arr2);
+
+
+//     }
+
+//     return 0;
+// }
+
+
+// int main()
+// {
+//     char password[20]={0};
+//     int i = 0;
+//     for(i=0;i<3;i++)
+//     {
+//         printf("请输入密码:");
+//         scanf("%s",password);
+//         if(strcmp(password,"123456")==0)
+//         {
+//             printf("登陆成功\n");
+//             break;
+//         }
+//         else 
+//         {
+//             printf("密码错误，重新输入：");
+//         }
+//     }
+//     if (i==3)
+//     {
+//         printf("已连续输入错误3次");
+//     }
+
+
+
+//     return 0;
+// }
+
+// void menu(){
+//     printf("******************\n");
+//     printf("*****1.play ******\n");
+//     printf("*****0.exist******\n");
+//     printf("******************\n");
+// }
+
+// void game(){
+//     srand((unsigned int)time(NULL));
+//     int ret = rand()%100+1;
+//     int guess = 0;
+//     while (1)
+//     {
+//         printf("请猜数字");
+//         scanf("%d",&guess);
+//         if (guess < ret)
+//         {
+//             printf("猜小了\n");
+//         }
+//         else if (guess > ret)
+//         {
+//             printf("猜大了\n");
+//         }
+//         else if (guess == ret)
+//         {
+//             printf("猜对了\n");
+//             break;
+//         }
+
+//     }
+
+
+
+// }
+// int main()
+// {
+//     int input = 0;
+//     do 
+//     {
+//         menu();
+//         printf("请选择:>");
+//         scanf("%d",&input);
+//         switch(input)
+//         {
+//             case 1:
+//             game();
+//             break;
+//             case 0:
+//             printf("退出游戏\n");
+//             break;
+//             default:
+//             printf("输入错误");
+//             break;
+        
+//         }
+     
+
+
+
+//     }while(input);
+    
+
+
+//     return 0;
+//     }
+
+// int main()
+// {
+//     int a = 0;
+//     int b = 0;
+//     int c = 0;
+//     printf("请输入三个数字");
+//     scanf("%d %d %d",&a,&b,&c);
+//     if (a < b)
+//     {
+//         int tmp = a;
+//         a = b;
+//         b = tmp;
+//     }
+//     if (a < c)
+//     {
+//         int tmp = a;
+//         a = c;
+//         c = tmp;
+//     }
+//     if (b < c)
+//     {
+//         int tmp = b;
+//         b = c;
+//         c = tmp;
+//     }
+//     printf("%d %d %d\n",a,b,c);
+//     return 0;
+// }
+
+// int main()
+// {
+//     int i = 0;
+//     for(i=0;i<=100;i++)
+//     {
+//         if(i%3==0)
+//         {
+//             printf("%d\n",i);
+//         }
+//     }
+//     return 0;
+// }
+
+// int main()
+// {
+//     int a = 0;
+//     int b = 0;
+//     int i = 0;
+//     int m = 0;
+//     printf("请输入两个数");
+//     scanf("%d %d",&a,&b);
+//     if(a<b)
+//     {
+//         for(i=1;i<=a;i++)
+//         {
+//             if(a%i==0 && b%i==0)
+//             {m=i;
+            
+//             }
+//         }
+//     }
+//     if (a>b)
+//     {
+//         for(i=1;i<=b;i++)
+//         {
+//         if(a%i==0 && b%i==0)
+//          {m=i;
+//         }}
+//     }
+    
+
+
+//     printf("最大公约数是：%d\n",m);
+//     return 0;
+// }
+
+int main()
 {
-    int a = 0;
-    while (a<=10)
+    int i = 0;
+    int a = 1;
+    int count = 0;
+    for(i=100;i<=200;i++)
     {
-        a++;
-        if(a==5)
-        continue;
-        printf("%d",a);
-    }
+        for(a=2;a<i;a++)
+        {
+            if(i%a==0)
+            {
+                break;
+            }
+        }
+        if (i==a)
+        {
+            printf("%d\n",i);
+        }
+        
+        }
+    
 
     return 0;
 }
