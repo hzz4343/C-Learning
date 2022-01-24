@@ -651,38 +651,211 @@
 //     return 0;
 // }
 
-int binary_search(int x[],int y, int z)
-{
-    int i = 0;
-    int left = 0;
-    int right = z-1;
-    while(left<=right)
-    {    int mid = (left+right)/2;
-        if(x[mid]>y)
-        {
-            right = mid-1;
-        }
-        else if (x[mid]<y) 
-        {   left = mid+1;}
-        else if (x[mid]==y)
-            return mid;
-}
-    return -1;
-}
+// int binary_search(int x[],int y, int z)
+// {
+//     int i = 0;
+//     int left = 0;
+//     int right = z-1;
+//     while(left<=right)
+//     {    int mid = (left+right)/2;
+//         if(x[mid]>y)
+//         {
+//             right = mid-1;
+//         }
+//         else if (x[mid]<y) 
+//         {   left = mid+1;}
+//         else if (x[mid]==y)
+//             return mid;
+// }
+//     return -1;
+// }
 
-int main()
-{
-    int arr[]={1,2,3,4,5,6,7,8,9,10};
-    int key = 14;
-    int sz = sizeof(arr)/sizeof(arr[0]);
-    int ret = binary_search(arr,key,sz);
+// int main()
+// {
+//     int arr[]={1,2,3,4,5,6,7,8,9,10};
+//     int key = 14;
+//     int sz = sizeof(arr)/sizeof(arr[0]);
+//     int ret = binary_search(arr,key,sz);
 
-    if (-1 == ret)
-    {
-        printf("找不到\n");
-    }
-    else
-        printf("下标是:%d\n",ret);
+//     if (-1 == ret)
+//     {
+//         printf("找不到\n");
+//     }
+//     else
+//         printf("下标是:%d\n",ret);
 
-    return 0;
-}
+//     return 0;
+// }
+
+// void add(int *n)
+// {
+
+//     (*n) ++;
+// }
+
+// int main()
+// {
+//     int num = 0;
+//     add(&num);
+//     printf("%d\n",num);
+//     return 0;
+// }
+
+
+// int main ()
+// {
+//     printf("%d\n",printf("%d\n",printf("%d\n",43)));
+
+
+
+//     return 0;
+// }
+
+// #include "add.h"
+// int main()
+// {
+//     int a = 1;
+//     int b = 2;
+//     printf("%d\n",add(a,b));
+// }
+
+
+// void print (int x)
+// {
+//     if (x>9)
+// {
+//     print(x/10);
+// }
+//     printf("%d\n",x%10);
+// }
+
+// int main()
+// {
+//     unsigned int a = 0;
+//     scanf("%u",&a);
+//     print(a);
+
+
+//     return 0;
+// }
+
+// int my_strlen(char* str)
+// {
+//     if (*str!='\0')
+//     {
+//         return 1 + my_strlen(str+1);
+
+//     }
+//     else 
+//         return 0;
+// }
+
+// int main()
+// {
+//     char arr[]="bit";
+//     printf("%d",my_strlen(arr));
+
+
+//     return 0;
+// }
+
+// int Fac(int x)
+// {
+//     if(x<=1)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return x*Fac(x-1);
+//     }
+// }
+
+
+
+// int main()
+// {
+//     int n = 0;
+//     scanf("%d",&n);
+//     int ret = Fac(n);
+//     printf("%d\n",ret);
+
+//     return 0;
+// }
+
+
+// int fab(int x)
+// {
+//     if (x<=2)
+//     {
+//         return 1;
+//     }
+//     else return fab(x-1)+fab(x-2);
+// }
+
+// int main()
+// {
+//     int n = 0;
+//     scanf("%d",&n);
+//     printf("%d\n",fab(n));
+
+
+//     return 0;
+// }
+// int fab (int x)
+// {
+//     int a = 1;
+//     int b = 1;
+//     int c = 1;
+//     while (x>2)
+//     {
+//         c = a + b;
+//         a = b;
+//         b = c;
+//         x--;
+//     }
+//     return c;
+
+
+// }
+
+// int main()
+// {
+//     int n = 0;
+//     scanf("%d",&n);
+//     printf("%d\n",fab(n));
+//     return 0;
+// }
+
+// int main()
+// {
+//     int i = 0;
+//     int count = 0;
+//     for (i=1;i<=100;i++)
+//     {
+//         if (i%10==9)
+//         count++;
+//         if (i/10==9)
+//         count++;
+
+//     }
+
+//     printf("%d\n",count);
+
+//     return 0;
+// }
+
+// int main()
+// {
+//     int a = 1;
+//     int b = 2;
+//     double ret = 0;
+//     for(a=1,b=2;a<=99 && b<=100;a+=2,b+=2)
+//     {ret += (1.0/a) - (1.0/b);
+
+//     }
+//     printf("%f\n",ret);
+//     return 0;
+
+// }
+
