@@ -859,3 +859,215 @@
 
 // }
 
+// int main()
+// {
+//     int arr[10]={1,2,3,4,5,6,7,8,9,10};
+//     int i = 0;
+//     int ret = arr[0];
+//     for(i=0;i<10;i++)
+//     {
+//         if(arr[i]>ret)
+//         ret = arr[i];
+//     }
+
+//     printf("%d\n",ret);
+//     return 0;
+// }
+
+// int main()
+// {
+//     int a = 1;
+//     int b = 1;
+//     int ret = 0;
+//     for (a=1,b=1;a<10 && b<10;a++)
+//     {
+    
+//     ret = a * b; 
+//     printf("%d * %d = %2d ",a,b,ret);
+//     if (a==9)
+//     {
+//         b++;
+//         a=b-1;
+//         printf("\n");
+//     }
+//     }
+
+
+
+//     return 0;
+// }
+
+
+// void print_table(int n)
+// {
+//     int i = 0;
+//     int a = 0;
+//     for(i=1;i<=n;i++)
+//     {
+//         for(a=1;a<=i;a++)
+//         {printf("%d*%d=%2d ",i,a,a*i);}
+//         printf("\n");
+//     }
+
+
+// }
+
+// int main()
+// {
+//     int n = 0;
+//     scanf("%d",&n);
+//     print_table(n);
+
+//     return 0;
+// }
+
+// int my_strlen(char *str)
+// {
+//     int count = 0;
+//     while (*str != 0)
+//     {
+//         count ++;
+//         str++;
+//     }
+//     return count;
+// }
+
+
+// void reverse_string(char *str)
+// {
+//     int left = 0;
+//     int right = my_strlen(str)-1;
+//     char tmp = 0;
+//     while(left<right)
+//     {
+//         char tmp = str[left];
+//         str[left]=str[right];
+//         str[right]=tmp; 
+//         left++;
+//         right--;
+//     }
+
+// }
+
+// int my_strlen(char *str)
+// {
+//     int count = 0;
+//     while (*str != 0)
+//     {
+//         count ++;
+//         str++;
+//     }
+//     return count;
+// }
+
+
+// void reverse_string(char *str)
+// {
+//     char tmp = *str;
+//     int len = my_strlen(str);
+//     *str = *(str+len-1);
+//     *(str+len-1)='\0';
+//     if(my_strlen(str+1)>=2)
+//     {reverse_string(str+1);}
+//     *(str+len-1)=tmp;
+// }   
+// int main()
+// {
+//     char arr[]="abcdef";
+//     reverse_string(arr);
+//     printf("%s\n",arr);
+
+//     return 0;
+// }
+
+int a = 0;
+// int sum = 0;
+// int my_sum(int i)
+// {
+//     a=i%10;
+//     sum += a;
+//     if(i>=10)
+//     {
+//         my_sum(i/10);
+//     }
+//     return sum;
+
+// }
+
+// int main()
+// {
+//     int i = 0;
+//     scanf("%d",&i);
+//     int ret = my_sum(i);
+//     printf("%d\n",ret);
+
+//     return 0;
+// }
+
+
+// double pow(int n, int k)
+// { 
+//     if (k>0)
+//     {
+//         return n*pow(n,k-1);
+//     }
+//     else if (k==0)
+//     return 1.0;
+//     else
+//     return 1.0/(pow(n,-k));
+// }
+
+// int main()
+// {
+//     int n = 0;
+//     int k = 0;
+//     scanf("%d %d",&n,&k);
+//     double ret = pow(n,k);
+//     printf("%lf\n",ret);
+
+//     return 0;
+// }
+
+
+// void bubble_sort(int arr[],int sz)
+// {
+//     int i = 0;
+//     int flag = 1;
+//     for(i=0;i<sz-1;i++)
+//     {
+//         int j = 0;
+//         for(j=0;j<sz-1-i;j++)
+//         {
+//             if (arr[j]>arr[j+1])
+//             {
+//                 int tmp = arr[j];
+//                 arr[j]=arr[j+1];
+//                 arr[j+1]=tmp;
+//                 flag = 0;
+//             }
+//         }
+//         if (flag == 1)
+//         {
+//             break;
+//         }
+//     }
+// }
+
+// int main ()
+// {
+//     int arr[]={9,8,7,6,5,4,3,2,1,0};
+//     int sz = sizeof(arr)/sizeof(arr[0]);
+//     bubble_sort(arr,sz);
+//     printf("%p\n",arr);
+//     return 0;
+// }
+
+int main()
+{
+    char a = 3;
+    char b = 127;
+    char c = a + b;
+    printf("%d\n",c);
+
+    return 0;
+}
