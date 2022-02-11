@@ -1062,12 +1062,164 @@ int a = 0;
 //     return 0;
 // }
 
+// int main()
+// {
+//     char a = 3;
+//     char b = 127;
+//     char c = a + b;
+//     printf("%d\n",c);
+
+//     return 0;
+// }
+
+
+// void init(int arr[],int sz)
+// {
+//     int i = 0;
+//     for(i=0;i<sz;i++)
+//     {
+//         arr[i]=0;
+//     }
+// }
+
+// int main()
+// {
+//     int arr[10]={1,2,3,4,5,6,7,8,9,10};
+//     int sz = sizeof(arr)/sizeof(arr[0]);
+//     init(arr,sz);
+//     printf("%d\n",arr[2]);
+//     return 0;
+// }
+
+// void change(int arr1[],int arr2[],int sz)
+// {
+//     int i = 0;
+//     int tmp = 0;
+//     for (i=0;i<sz;i++)
+//     {
+//         tmp=arr1[i];
+//         arr1[i]=arr2[i];
+//         arr2[i]=tmp;
+//     }
+// }
+
+// int main()
+// {
+//     int arr1[3]={1,2,3};
+//     int arr2[3]={4,5,6};
+//     int sz = sizeof(arr1)/sizeof(arr1[0]);
+//     change(arr1,arr2,sz);
+//     printf("%d\n",arr1[0]);
+//     return 0;
+// }
+
+// char* my_strcpy(char * dest, const char * src)
+// {
+
+//     char * ret = dest;
+//     while (*dest++ = *src++)
+//     {
+//         ;
+//     }
+//     return ret;
+// }
+
+// int main()
+// {
+//     char arr1[]="xxxxxxxxx";
+//     char arr2[]="hello";
+//     printf("%s\n",my_strcpy(arr1,arr2));
+
+//     return 0;
+
+// }
+
+// int my_strlen(const char * str)
+// {
+//     // assert(str[]!=0);
+//     int count = 0;
+//     while(*str++!='\0')
+//     {
+//         count++;
+//     }
+//     return count;
+// }
+
+// int main()
+// {
+//     char arr[]="hello";
+//     printf("%d\n",my_strlen(arr));
+    
+//     return 0;
+// }
+
+// int cal(int a, int b)
+// {
+//     int i = 0;
+//     if(a>b)
+//     {
+//         for(i=0;i<=a*b;i++)
+//     {
+//         if((i+a)%a==0&&(i+a)%b==0)
+//         return (i+a);
+//     }
+//     }
+//     else
+//     {
+//         for(i=0;i<=a*b;i++)
+//     {
+//         if((i+b)%a==0&&(i+b)%b==0)
+//         return (i+b);
+//     }
+//     }
+//     return 0;
+// }
+
+// int main()
+// {
+//     int a =7;
+//     int b =8;
+//     printf("%d\n",cal(a,b));
+//     return 0;
+// }
+
+void reverse (char * left,char * right)
+{
+    while(left<right)
+    {
+    char tmp = 0;
+    tmp = *left;
+    *left = *right;
+    *right = tmp;
+    left ++;
+    right--;
+    }
+}
+
 int main()
 {
-    char a = 3;
-    char b = 127;
-    char c = a + b;
-    printf("%d\n",c);
+    char arr[100]={0};
+    gets(arr);
+    //第一步：所有字符反转
+    int len = strlen(arr);
+    reverse(arr,arr+len-1);
+    
+    //第二步：每个单词翻转
+    char * start = arr;
+    while(*start)
+    {
+        char *end = start;
+        while(*end!=' '&&*end!='\0')
+        {
+            end++;
+        }
+        reverse(start,end-1);
+        if(*end==' ')
+        start=end+1;
+        else
+        start=end;
+    }
 
+    printf("%s\n",arr);
     return 0;
 }
